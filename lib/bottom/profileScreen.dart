@@ -3,6 +3,7 @@ import 'package:warban/bottom/widget/buttonWidget.dart';
 import 'package:warban/bottom/widget/profileWidget.dart';
 import 'package:warban/utils/userDummy.dart';
 import '../model/user.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({Key? key}) : super(key: key);
@@ -12,6 +13,7 @@ class ProfileScreen extends StatefulWidget {
 }
 
 class _ProfileScreenState extends State<ProfileScreen> {
+
   @override
   Widget build(BuildContext context) {
     const user = UserDummy.myUser;
@@ -55,9 +57,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
         ],
       );
 
-  Widget buildUpgradeButton() => ButtonWidget(
+  Widget buildUpgradeButton() => const ButtonWidget(
         text: 'Visit Instagram',
-        onClicked: () {},
+        onClicked: _launchUrl,
       );
 
   Widget buildAbout(User user) => Container(
@@ -77,4 +79,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
           ],
         ),
       );
+}
+// URL instagram use launch url package
+final Uri _url = Uri.parse('https://youtu.be/T0qbFgbFhg0');
+
+Future<void> _launchUrl() async {
+  if (!await launchUrl(_url)) {
+    throw 'Could not launch $_url';
+  }
 }

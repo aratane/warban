@@ -186,8 +186,12 @@ class Body extends StatelessWidget {
                   Container(
                     width: 35,
                     height: 35,
+                    decoration: const BoxDecoration(
+                        shape: BoxShape.circle, color: Colors.white),
                     child: Center(
                       child: FavoriteButton(
+                        iconSize: 35,
+                        iconDisabledColor: Colors.black,
                         valueChanged: (isFavorite) {
                           print('Is Favorite : $isFavorite');
                         },
@@ -256,10 +260,16 @@ class Body extends StatelessWidget {
                   Container(
                     width: 35,
                     height: 35,
-                    child: FavoriteButton(
-                      valueChanged: (isFavorite) {
-                        print('Is Favorite : $isFavorite');
-                      },
+                    decoration: const BoxDecoration(
+                        shape: BoxShape.circle, color: Colors.white),
+                    child: Center(
+                      child: FavoriteButton(
+                        iconSize: 35,
+                        iconDisabledColor: Colors.black,
+                        valueChanged: (isFavorite) {
+                          print('Is Favorite : $isFavorite');
+                        },
+                      ),
                     ),
                   ),
                 ],
@@ -324,10 +334,16 @@ class Body extends StatelessWidget {
                   Container(
                     width: 35,
                     height: 35,
-                    child: FavoriteButton(
-                      valueChanged: (isFavorite) {
-                        print('Is Favorite : $isFavorite');
-                      },
+                    decoration: const BoxDecoration(
+                        shape: BoxShape.circle, color: Colors.white),
+                    child: Center(
+                      child: FavoriteButton(
+                        iconSize: 35,
+                        iconDisabledColor: Colors.black,
+                        valueChanged: (isFavorite) {
+                          print('Is Favorite : $isFavorite');
+                        },
+                      ),
                     ),
                   ),
                 ],
@@ -397,7 +413,7 @@ class Body extends StatelessWidget {
                     child: Center(
                       child: FavoriteButton(
                         iconSize: 35,
-                        iconDisabledColor: Colors.transparent,
+                        iconDisabledColor: Colors.black,
                         valueChanged: (isFavorite) {
                           print('Is Favorite : $isFavorite');
                         },
