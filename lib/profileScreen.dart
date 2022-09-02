@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:warban/bottom/widget/buttonWidget.dart';
-import 'package:warban/bottom/widget/profileWidget.dart';
 import 'package:warban/utils/userDummy.dart';
-import '../model/user.dart';
+import 'package:warban/widget/buttonWidget.dart';
+import 'package:warban/widget/profileWidget.dart';
+import 'utils/user.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ProfileScreen extends StatefulWidget {
@@ -81,7 +81,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
       );
 }
 // URL instagram use launch url package
-final Uri _url = Uri.parse('https://youtu.be/T0qbFgbFhg0');
+final Uri _url = Uri.parse('https://www.instagram.com/neihsn');
 
 Future<void> _launchUrl() async {
   if (!await launchUrl(_url)) {

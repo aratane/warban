@@ -1,8 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:warban/bottom/homeScreen.dart';
-import 'package:warban/bottom/placeScreen.dart';
-import 'package:warban/bottom/profileScreen.dart';
+import 'package:warban/homeScreen.dart';
+import 'package:warban/profileScreen.dart';
 
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({Key? key}) : super(key: key);
@@ -15,7 +13,6 @@ class _BottomNavBarState extends State<BottomNavBar> {
   int currentIndex = 0;
   final List<Widget> body = [
     const HomeScreen(),
-    const PlaceScreen(),
     const ProfileScreen(),
   ];
 
@@ -35,17 +32,6 @@ class _BottomNavBarState extends State<BottomNavBar> {
             label: 'Home',
             activeIcon: Icon(
               Icons.home_outlined,
-              color: Colors.blue,
-            ),
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.place,
-              color: Colors.black,
-            ),
-            label: 'Places',
-            activeIcon: Icon(
-              Icons.place_outlined,
               color: Colors.blue,
             ),
           ),

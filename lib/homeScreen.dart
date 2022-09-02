@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:warban/bottom/profileScreen.dart';
 import 'package:favorite_button/favorite_button.dart';
+import 'package:warban/menu/menuPage.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -134,7 +134,7 @@ class Body extends StatelessWidget {
       tag: tag,
       child: GestureDetector(
         onTap: () {
-          Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>const ProfileScreen()));
+          Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>const MenuPage()));
         },
         child: Container(
           height: 250,
